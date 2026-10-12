@@ -1,0 +1,28 @@
+let Vitorias = 100;
+let Derrotas = 20;
+let saldoVitorias;
+let nivelHeroi;
+
+function Subtrair(vitorias, derrotas) {
+    saldoVitorias = vitorias - derrotas;
+
+    if (saldoVitorias <= 10) {
+        nivelHeroi = "Ferro";
+    } else if (saldoVitorias >= 11 && saldoVitorias <= 20) {
+        nivelHeroi = "Bronze";
+    } else if (saldoVitorias >= 21 && saldoVitorias <= 50) {
+        nivelHeroi = "Prata";
+    } else if (saldoVitorias >= 51 && saldoVitorias <= 80) {
+        nivelHeroi = "Ouro";
+    } else if (saldoVitorias >= 81 && saldoVitorias <= 90) {
+        nivelHeroi = "Diamante";
+    } else if (saldoVitorias >= 91 && saldoVitorias <= 100) {
+        nivelHeroi = "Lendário";
+    } else {
+        nivelHeroi = "Imortal";
+    }
+}
+
+Subtrair(Vitorias, Derrotas);
+
+console.log("O herói tem um saldo de " + saldoVitorias + " e está no nível " + nivelHeroi + ".");
